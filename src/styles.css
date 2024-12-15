@@ -5,7 +5,7 @@ body {
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 180px;
   padding: 0 40px;
   width: 100%;
   box-sizing: border-box;
@@ -66,7 +66,7 @@ nav a:hover {
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 100px;
   width: 100%;
   max-width: none;
   padding: 0;
@@ -76,7 +76,7 @@ nav a:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 100px; /* Spacing between items within a column (double the column gap) */
+  gap: 180px; /* Spacing between items within a column (double the column gap) */
 }
 
 .image-item {
