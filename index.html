@@ -96,6 +96,25 @@
     </main>
 
     <script>
+      function preloadImages() {
+          return new Promise((resolve) => {
+              const images = document.querySelectorAll('.image-item img');
+              let loadedCount = 0;
+              
+              images.forEach(img => {
+                  if (img.complete) {
+                      loadedCount++;
+                      if (loadedCount === images.length) resolve();
+                  } else {
+                      img.addEventListener('load', () => {
+                          loadedCount++;
+                          if (loadedCount === images.length) resolve();
+                      });
+                  }
+              });
+          });
+      }
+      
       const observerOptions = {
         root: null,
         rootMargin: "0px",
