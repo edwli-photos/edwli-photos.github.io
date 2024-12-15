@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>edward's photography</title>
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="prefetch" href="static/lassen/lassen-1.jpg" />
-    <link rel="prefetch" href="static/lassen/lassen-2.jpg" />
-    <link rel="prefetch" href="static/lassen/lassen-3.jpg" />
-    <link rel="prefetch" href="static/north-cascades/north-cascades-1.jpg" />
-    <link rel="prefetch" href="static/north-cascades/north-cascades-2.jpg" />
   </head>
   <body>
     <header>
@@ -33,19 +28,19 @@
             <img src="static/lassen/lassen-1.jpg" alt="Lassen" />
             <div class="image-title">Lassen</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/monterey/monterey-1.jpg" alt="Monterey" />
             <div class="image-title">Monterey</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/north-cascades/north-cascades-3.jpg" alt="North Cascades" />
             <div class="image-title">North Cascades</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/olympic/olympic-2.jpg" alt="Olympic" />
             <div class="image-title">Olympic</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/yosemite/yosemite-1.jpg" alt="Yosemite" />
             <div class="image-title">Yosemite</div>
           </div>
@@ -60,15 +55,15 @@
             <img src="static/north-cascades/north-cascades-1.jpg" alt="North Cascades" />
             <div class="image-title">North Cascades</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/north-cascades/north-cascades-4.jpg" alt="North Cascades" />
             <div class="image-title">North Cascades</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/olympic/olympic-3.jpg" alt="Olympic" />
             <div class="image-title">Olympic</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/yosemite/yosemite-2.jpg" alt="Yosemite" />
             <div class="image-title">Yosemite</div>
           </div>
@@ -83,15 +78,15 @@
             <img src="static/north-cascades/north-cascades-2.jpg" alt="North Cascades" />
             <div class="image-title">North Cascades</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/olympic/olympic-1.jpg" alt="Olympic" />
             <div class="image-title">Olympic</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/olympic/olympic-4.jpg" alt="Olympic" />
             <div class="image-title">Olympic</div>
           </div>
-          <div class="image-item">
+          <div class="image-item animate-fade">
             <img src="static/yosemite/yosemite-3.jpg" alt="Yosemite" />
             <div class="image-title">Yosemite</div>
           </div>
@@ -136,7 +131,7 @@
       }, observerOptions);
 
       document.addEventListener("DOMContentLoaded", () => {
-        const imageItems = document.querySelectorAll(".image-item");
+        const imageItems = document.querySelectorAll(".animate-fade");
         imageItems.forEach((item) => observer.observe(item));
       });
     </script>

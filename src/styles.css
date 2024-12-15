@@ -84,12 +84,15 @@ nav a:hover {
   margin-bottom: 20px;
   overflow: hidden;
   width: 100%;
+}
+
+.image-item.animate-fade {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-.image-item.fade-in {
+.image-item.animate-fade.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
