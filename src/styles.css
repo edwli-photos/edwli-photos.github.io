@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0px;
+  padding: 20px;
   font-family: "Segoe Print", sans-serif;
 }
 
@@ -29,7 +29,7 @@ nav {
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 20px;
 }
 
 .logo {
