@@ -5,6 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>edward's photography</title>
     <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 140px auto;
+        padding: 0 40px;
+      }
+
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #0000ff;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #0000ff;
+        border-radius: 50%;
+        top: 15px;
+        z-index: 1;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+        text-align: left;
+      }
+
+      .timeline-item:nth-child(odd)::after {
+        right: -5px;
+      }
+
+      .timeline-item:nth-child(even)::after {
+        left: -5px;
+      }
+
+      .timeline-date {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .timeline-content {
+        padding: 20px;
+        background-color: #f8f8f8;
+      }
+
+      .timeline-content h3 {
+        margin: 0 0 10px 0;
+      }
+
+      .timeline-content p {
+        margin: 0;
+      }
+
+      .timeline-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1.5s ease, transform 1.5s ease;
+      }
+
+      .timeline-item.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -21,8 +105,110 @@
       </nav>
     </header>
 
-    <main>
-      <p>This page is under contruction...stay tuned! :)</p>
+    <main class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">September 2024</div>
+        <div class="timeline-content">
+          <h3>Yosemite National Park</h3>
+          <p>Marveled at iconic granite cliffs and waterfalls.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">August 2024</div>
+        <div class="timeline-content">
+          <h3>Olympic National Park</h3>
+          <p>Experienced diverse ecosystems from rainforests to beaches.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">July 2024</div>
+        <div class="timeline-content">
+          <h3>North Cascades National Park</h3>
+          <p>Hiked through rugged mountain terrain and glacial valleys.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">June 2024</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">May 2024</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">April 2024</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">March 2024</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Feb 2024</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2024</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 2023</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Nov 2023</div>
+        <div class="timeline-content">
+          <h3>Lassen National Park</h3>
+          <p>Explored volcanic landscapes and pristine lakes.</p>
+        </div>
+      </div>
     </main>
+
+    <footer>
+      <p>&copy; 2024 Edward Li. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const timelineItems = document.querySelectorAll(".timeline-item");
+        timelineItems.forEach((item) => observer.observe(item));
+      });
+    </script>
   </body>
 </html>
