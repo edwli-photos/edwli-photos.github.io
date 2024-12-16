@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  padding: 20px;
+  padding: 2%;
   font-family: "Segoe Print", sans-serif;
 }
 
 main {
   margin-top: 180px;
-  padding: 0 40px;
+  padding: 0 4%;
   width: 100%;
   box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 40px;
+  padding: 20px 4%;
   background-color: #ffffff;
   z-index: 1000;
   width: 100%;
@@ -41,7 +41,7 @@ nav {
 
 .nav-center {
   position: absolute;
-  left: 50%;
+  left: 52%;
   transform: translateX(-50%);
   display: flex;
   gap: 30px;
@@ -66,7 +66,7 @@ nav a:hover {
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
+  gap: 10%;
   width: 100%;
   max-width: none;
   padding: 0;
@@ -145,4 +145,50 @@ footer {
   font-size: 14px;
   color: #000000;
   margin-top: 40px;
+}
+
+@media only screen and (max-width: 794px) {
+    .masonry-column {
+        gap: 40px;
+    }
+
+    .logo {
+      font-size: 18px;
+    }
+
+    .nav-center a,
+    .instagram {
+      font-size: 12px;
+    }
+  
+    .nav-center {
+      gap: 15px;
+    }
+
+    .image-title {
+      font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 795px) and (max-width: 1000px) {
+    .masonry-column {
+        gap: 80px;
+    }
+
+    .logo {
+      font-size: 22px;
+    }
+
+    .nav-center a,
+    .instagram {
+      font-size: 16px;
+    }
+  
+    .nav-center {
+      gap: 20px;
+    }
+
+    .image-title {
+      font-size: 12px;
+    }
 }
