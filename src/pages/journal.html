@@ -63,6 +63,7 @@
       .timeline-date {
         font-weight: bold;
         margin-bottom: 10px;
+        font-size: 16px;
       }
 
       .timeline-content {
@@ -76,6 +77,7 @@
 
       .timeline-content p {
         margin: 0;
+        font-size: 16px
       }
 
       .timeline-item {
@@ -87,6 +89,46 @@
       .timeline-item.fade-in {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      @media only screen and (max-width: 580px) {
+          .timeline-date {
+              font-size: 10px;
+          }
+
+          .timeline-content h3 {
+              margin: 0 0 10px 0;
+              font-size: 12px;
+          }
+    
+          .timeline-content p {
+              margin: 0;
+              font-size: 10px;
+          }
+
+          .timeline {
+              padding: 0 10px;
+          }
+
+          .timeline-item {
+              padding: 10px 10px;
+          }
+      }
+
+      @media only screen and (min-width: 580px) and (max-width: 1000px) {
+          .timeline-date {
+              font-size: 12px;
+          }
+
+          .timeline-content h3 {
+              margin: 0 0 10px 0;
+              font-size: 14px;
+          }
+    
+          .timeline-content p {
+              margin: 0;
+              font-size: 12px;
+          }
       }
     </style>
   </head>
