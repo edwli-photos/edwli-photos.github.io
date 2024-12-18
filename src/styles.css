@@ -146,6 +146,25 @@ footer {
   margin-top: 40px;
 }
 
+@media (max-width: 480px) {
+  .image-title {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-center a,
+  .instagram {
+    font-size: 12px;
+  }
+
+  .nav-center {
+    gap: 15px;
+  }
+}
+
 @media (min-width: 480px) {
   .masonry-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -157,7 +176,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 794px) {
+@media only screen and (min-width: 480px) and (max-width: 790px) {
     .masonry-column {
         gap: 40px;
     }
@@ -176,11 +195,11 @@ footer {
     }
 
     .image-title {
-      font-size: 10px;
+      font-size: 12px;
     }
 }
 
-@media only screen and (min-width: 795px) and (max-width: 1000px) {
+@media only screen and (min-width: 790px) and (max-width: 1000px) {
     .masonry-column {
         gap: 80px;
     }
@@ -199,6 +218,6 @@ footer {
     }
 
     .image-title {
-      font-size: 12px;
+      font-size: 13px;
     }
 }
